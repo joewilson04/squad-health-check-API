@@ -1,0 +1,3 @@
+https://docs.docker.com/get-started/
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
+https://docs.djangoproject.com/en/4.0/

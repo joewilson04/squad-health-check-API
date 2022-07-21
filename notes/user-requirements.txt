@@ -1,0 +1,55 @@
+1. scrum master can create, edit and delete projects
+
+
+2. scrum master can create, delete and end/lock voting rounds
+
+
+3. when a voting round is created, a unique code is created which is used for squad members to join the voting
+
+
+4. the scrum master should not be able to vote
+
+
+5. a squad member is able to vote if they supply their email address and the unique code
+
+
+6. if the code is invalid or the voting round linked to that code has ended, the user should recieve a suitable warning/error
+
+
+7. The number of registered members will be recorded by the API
+
+
+8. The scrum master should be able to enable the voting on each health indicator in sequence
+
+
+9. Registered squad members can post a vote and a trend direction once for each health indicator. This is then to be stored in a database
+
+
+10. A squad member can get the next health indicator if it has been made available by the scrum master. If it hasn't, a warning/error should appear
+
+
+11. The scrum master can progress the round to the next health indicator
+
+
+12. The back-end API should be secure with built in authorisation and authentication for scrum master and squad member roles
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CORE DELIVERABLES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1. Back-end API:
+    a. A docker image that contains the squad health check API
+
+    b. A docker-compose yaml file to stand up the API container and any additional containers
+
+    c. The docker image can be migrated to a test machine using "docker save" and "docker load" in a command prompt
+
+
+2. API test harness:
+    a. Postman collection with example API calls
+
+
+3. A front-end User Interface that includes:
+    a. A mobile responsive UI for squad members to register and vote using mobile devices
+
+    b. A management UI for scrum masters to manage projects and voting rounds, and includes a voting round summary showing the average rating and trends
