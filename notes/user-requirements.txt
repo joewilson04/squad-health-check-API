@@ -31,16 +31,16 @@
 11. The scrum master can progress the round to the next health indicator
 
 
-12. The back-end API should be secure with built in authorisation and authentication for scrum master and squad member roles
+***12. The back-end API should be secure with built in authorisation and authentication for scrum master and squad member roles
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CORE DELIVERABLES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 1. Back-end API:
-    a. A docker image that contains the squad health check API
+    ***a. A docker image that contains the squad health check API
 
-    b. A docker-compose yaml file to stand up the API container and any additional containers
+    ***b. A docker-compose yaml file to stand up the API container and any additional containers
 
     c. The docker image can be migrated to a test machine using "docker save" and "docker load" in a command prompt
 
