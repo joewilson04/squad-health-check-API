@@ -22,7 +22,7 @@ class staffManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password):
-        '''create and save superusers/scrum masters'''
+        '''create and save superusers'''
 
 
         user = self.create_user(email, password)
