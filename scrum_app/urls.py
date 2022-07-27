@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 from django.contrib.auth.views import LoginView
+from squad_health_check_api.views import scrum_loginView
 
 app_name="scrum"
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     #path('home/', include("django.contrib.auth.urls"), name="home")
     #path('home', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('login/', LoginView.as_view(template_name='scrum/login.html'), name='login'),
+    path('login/', scrum_loginView.as_view(), name='login'),
+    path('profile/', TemplateView.as_view(template_name='scrum/profile.html'), name='profile'),
 ]
