@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
+from django.contrib.auth.views import LoginView
 
+app_name="squad"
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path("scrum/", include("django.contrib.auth.urls"), name='scrum'),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    #path('home/', include("django.contrib.auth.urls"), name="home")
+    #path('home', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('login/', LoginView.as_view(template_name='squad/login.html'), name='login'),
 ]

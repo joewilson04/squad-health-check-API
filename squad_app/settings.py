@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'squad_health_check_project.urls'
+ROOT_URLCONF = 'squad_app.urls'
 
 TEMPLATES = [
     {
@@ -61,10 +61,9 @@ TEMPLATES = [
     },
 ]
 
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
 
-WSGI_APPLICATION = 'squad_health_check_project.wsgi.application'
+
+WSGI_APPLICATION = 'squad_app.wsgi.application'
 
 
 # Database
