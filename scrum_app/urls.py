@@ -19,12 +19,10 @@ from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 from django.contrib.auth.views import LoginView
 
-app_name="squad"
+app_name="scrum"
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     #path('home/', include("django.contrib.auth.urls"), name="home")
     #path('home', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('login/', LoginView.as_view(template_name='squad/login.html'), name='login'),
-    path('', views.my_function_1),  # This URL will resolve as HTTP://localhost/APP1/
-    path('second_url', views.my_function_2),
+    path('login/', LoginView.as_view(template_name='scrum/login.html'), name='login'),
 ]
