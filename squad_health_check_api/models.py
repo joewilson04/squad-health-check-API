@@ -5,10 +5,10 @@ from django.contrib.auth.models import BaseUserManager
 from django.conf import settings
 
 
-class staffManager(BaseUserManager):
-    '''manages scrum masters and superusers'''
+class userManager(BaseUserManager):
+    '''manages all users'''
 
-    def create_user(self, email, password=None):
+    def create_scrum_master(self, email, password=None):
         """Create a new user profile"""
         if not email:
             raise ValueError("Users must have an email address")
@@ -31,16 +31,11 @@ class staffManager(BaseUserManager):
         user.is_staff = True
         user.save(using=self._db)
 
+    def create_squad_member(self, email):
+        if not email:
+            raise ValueError("You must enter a valid email address")
 
-class UserProfile(AbstractBaseUser, PermissionsMixin):
-    """Database model for users in the system"""
-    email = models.EmailField(max_length=255, unique=True)
-    is_staff = models.BooleanField(default=False)
-
-    objects = UserProfileManager()
-
-    USERNAME_FIELD = 'email'
-
-    def __str__(self):
-        """Return string representation of our user"""
-        return self.email
+        email = self.normalize_email(email)
+        user = self.model(email=email)
+        user.save(using=self._db)
+        return user

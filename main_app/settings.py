@@ -31,8 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'squad_app.settings_squad',
-    'scrum_app.settings_scrum'
-
+    'scrum_app.settings_scrum',
 ]
 
 MIDDLEWARE = [
