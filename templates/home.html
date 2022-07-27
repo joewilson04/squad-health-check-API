@@ -4,6 +4,9 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<a href="{% url 'scrum:login' %}">Are You A Squad Member?</a>
 
-<a href="{% url 'login' %}">Are you a scrum master?</a>
+<br><br><br>
+
+<a href="{% url 'scrum:login' %}">Are You A Scrum Master?</a>
 {% endblock %}
