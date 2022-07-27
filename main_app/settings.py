@@ -30,7 +30,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'scrum_app.settings'
+    'squad_app.settings_squad',
+    'scrum_app.settings_scrum'
+
 ]
 
 MIDDLEWARE = [
@@ -43,7 +45,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'squad_app.urls'
+ROOT_URLCONF = 'main_app.urls'
 
 TEMPLATES = [
     {
@@ -63,7 +65,7 @@ TEMPLATES = [
 
 
 
-WSGI_APPLICATION = 'squad_app.wsgi.application'
+WSGI_APPLICATION = 'scrum_app.wsgi.application'
 
 
 # Database
