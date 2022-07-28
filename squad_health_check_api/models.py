@@ -3,7 +3,11 @@ from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
 from django.conf import settings
+from django.contrib.auth.models import User,Group
 
+class scrumMasterGroup(Group):
+    def scrum_master_group(self):
+        created = Group.objects.get_or_create(name='Scrum Master')
 
 class userManager(BaseUserManager):
     '''manages all users'''
@@ -17,6 +21,7 @@ class userManager(BaseUserManager):
         user = self.model(email=email)
 
         user.set_password(password)
+        scrum_master_group()
         user.save(using=self._db)
 
         return user
