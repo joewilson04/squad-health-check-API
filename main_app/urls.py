@@ -20,8 +20,8 @@ from django.views.generic.base import TemplateView
 
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('admin/', admin.site.urls, name='admin'),
-    path('scrum/', include('scrum_app.urls')),
+    path('', TemplateView.as_view(template_name='home.html'), name='home'), #home page containing links to get to squad and scrum login
+    path('admin/', admin.site.urls, name='admin'), #admin page
+    path('scrum/', include('scrum_app.urls')), #links the squad and scrum app together to main
     path('squad/', include('squad_app.urls')),
 ]

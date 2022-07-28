@@ -21,9 +21,7 @@ from squad_health_check_api.views import scrum_loginView
 
 app_name="scrum"
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    #path('home/', include("django.contrib.auth.urls"), name="home")
-    #path('home', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('login/', scrum_loginView.as_view(), name='login'),
-    path('profile/', TemplateView.as_view(template_name='scrum/profile.html'), name='profile'),
+    path('admin/', admin.site.urls, name='admin'), #admin page
+    path('login/', scrum_loginView.as_view(), name='login'), #login page for scrum master
+    path('profile/', TemplateView.as_view(template_name='scrum/profile.html'), name='profile'), #profile page to view and create projects/voting rounds
 ]

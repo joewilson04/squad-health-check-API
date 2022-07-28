@@ -6,6 +6,7 @@ from django.conf import settings
 from django.contrib.auth.models import User,Group
 
 class scrumMasterGroup(Group):
+    '''creates scrum master group'''
     def scrum_master_group(self):
         created = Group.objects.get_or_create(name='Scrum Master')
 
@@ -35,12 +36,3 @@ class userManager(BaseUserManager):
         user.is_superuser = True
         user.is_staff = True
         user.save(using=self._db)
-
-    def create_squad_member(self, email):
-        if not email:
-            raise ValueError("You must enter a valid email address")
-
-        email = self.normalize_email(email)
-        user = self.model(email=email)
-        user.save(using=self._db)
-        return user

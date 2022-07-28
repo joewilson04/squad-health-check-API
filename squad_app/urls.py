@@ -21,9 +21,7 @@ from squad_health_check_api.views import squad_loginView
 
 app_name="squad"
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    #path('home/', include("django.contrib.auth.urls"), name="home")
-    #path('home', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('login/', squad_loginView.as_view(), name='login'),
-    path('profile/', TemplateView.as_view(template_name='squad/profile.html'), name='profile'),
+    path('admin/', admin.site.urls, name='admin'), #/admin page
+    path('login/', squad_loginView.as_view(), name='login'), #login for squad members page
+    path('profile/', TemplateView.as_view(template_name='squad/profile.html'), name='profile'), #profile page for squad member upon login
 ]
