@@ -1,3 +1,10 @@
 for the squad member to login correctly, i must create a view that (potentially) inherits django auth but instead of sending and comparing a unique password, the user will input the code and the program must compare it to the code stored in DB
 
 need to create proper user groups so scrum masters cannot login through squad member
+
+
+
+
+
+if i have time i can implement...
+  rate limiter to stop brute force attacks
