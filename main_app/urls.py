@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 
 
-
+app_name="main"
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'), #home page containing links to get to squad and scrum login
     path('admin/', admin.site.urls, name='admin'), #admin page
