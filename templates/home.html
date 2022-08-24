@@ -9,10 +9,20 @@
      <link rel="stylesheet" href="{% static 'style.css' %}">
   </head>
   <body>
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Squad Health Check</span>
+      </div>
+    </nav>
     <div class="container text-center">
         <div class="col">
-          <a href="{% url 'squad:login' %}"><button type="button" class="btn btn-primary btn-lg" style="width: 17.5em; height: 2.5em;"><p>Are You A Squad Member?</p></button></a>
-          <a href="{% url 'scrum:login' %}"><button type="button" class="btn btn-primary btn-lg" style="width: 17.5em; height: 2.5em;"><p>Are You A Scrum Master?</p></button></a>
+          <div id="btnSquad">
+            <a href="{% url 'squad:login' %}"><button type="button" class="btn btn-primary btn-lg" style="width: 33%; height: 10%;"><p style="margin: 0px; vertical-align: middle;">Are You A Squad Member?</p></button></a>
+          </div>
+          <br>
+          <div id="btnScrum">
+            <a href="{% url 'scrum:login' %}"><button type="button" class="btn btn-primary btn-lg" style="width: 33%; height: 10%;"><p style="margin: 0px; vertical-align: middle;">Are You A Scrum Master?</p></button></a>
+          </div>
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
