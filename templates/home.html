@@ -9,12 +9,11 @@
      <link rel="stylesheet" href="{% static 'style.css' %}">
   </head>
   <body>
-    <nav class="navbar bg-light">
+    <nav class="navbar bg-light" style="max-width: 100%">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Squad Health Check</span>
-        <a href="{% url 'admin:index' %}"><button type="button" style="float: right;">admin</button></a>
+        <a href="{% url 'admin:index' %}"><button type="button" class="btn btn-light" style="float: right;">admin</button></a>
       </div>
-
     </nav>
     <div class="container text-center">
         <div class="col">
